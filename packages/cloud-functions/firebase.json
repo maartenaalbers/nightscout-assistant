@@ -3,7 +3,7 @@
     "source": "."
   },
   "hosting": {
-    "public": "dist",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -11,8 +11,16 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/api/v2/dialogflow",
+        "function": "dialogflow"
+      },
+      {
+        "source": "/api/v1/glucoseStatus",
+        "function": "glucoseStatus"
+      },
+      {
+        "source": "/api/v1/validateUrl",
+        "function": "validateUrl"
       }
     ]
   }
