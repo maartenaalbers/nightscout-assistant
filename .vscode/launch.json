@@ -10,15 +10,13 @@
             "name": "Test API v2",
             "program": "${workspaceFolder}/packages/api/v2/node_modules/mocha/bin/_mocha",
             "args": [
-                "-r",
-                "ts-node/register",
                 "--timeout",
                 "999999",
-                "--colors",
                 "${workspaceFolder}/packages/api/v2/**/*.spec.ts"
             ],
             "env": {
-                "TS_NODE_PROJECT": "${workspaceFolder}/packages/api/v2/tsconfig.json"
+                "TS_NODE_PROJECT": "${workspaceFolder}/packages/api/v2/tsconfig.json",
+                "TS_NODE_TRANSPILE_ONLY": "true"
             },
             "console": "integratedTerminal",
             "internalConsoleOptions": "openOnSessionStart",
