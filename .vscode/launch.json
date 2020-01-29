@@ -7,6 +7,28 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Test API v2",
+            "program": "${workspaceFolder}/packages/api/v2/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-r",
+                "ts-node/register",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/packages/api/v2/**/*.spec.ts"
+            ],
+            "env": {
+                "TS_NODE_PROJECT": "${workspaceFolder}/packages/api/v2/tsconfig.json"
+            },
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Test Cloud Functions",
             "program": "${workspaceFolder}/packages/cloud-functions/node_modules/mocha/bin/_mocha",
             "args": [
