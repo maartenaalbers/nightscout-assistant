@@ -99,7 +99,7 @@ function formatResponse(d, unit, t) {
 
   // Formulate response
   if(bg > 4.5 && bg < 9){
-    return t("answers.withTrend", { bg: nf(bg), trend, ago });
+    return t("answers.fine");
   } else if (trend) {
     return t("answers.withTrend", { bg: nf(bg), trend, ago });
   } else {
