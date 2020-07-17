@@ -28,6 +28,7 @@
     },
     "answers": {
       "noTrend": "{{bg}} sinds {{ago}}.",
+      "fine": "ze zit goed.",
       "withTrend": "{{bg}} en {{trend}} sinds {{ago}}."
     },
     "google-assistant": {
